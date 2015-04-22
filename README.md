@@ -5,4 +5,6 @@ Adds ability to put HumHub in Development Mode, restricting access to anyone but
 
 - Upload or Clone as `devmode` in your `protected/modules/` folder.
 
+
+
 Powered by [HumHub](https://humhub.org/)
