@@ -1,0 +1,18 @@
+{
+    "id": "devmode",
+    "name": "Development Mode",
+    "description": "Adds ability to put HumHub in Development Mode, restricting access to anyone but admins.",
+    "keywords": ["development", "mode", "maintenance", "widget", "dashboard"],
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Jordan Thompson"
+		}
+	],
+	"homepage": "https://github.com/WASasquatch/humhub-modules-devmode",
+	"license": "AGPL",
+	"time": "2015-04-21",
+	"humhub": {
+		"minVersion": "0.8.0"
+	}
+}
