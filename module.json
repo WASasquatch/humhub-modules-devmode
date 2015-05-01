@@ -9,10 +9,10 @@
 			"name": "Jordan Thompson"
 		}
 	],
-	"homepage": "https://github.com/WASasquatch/humhub-modules-devmode",
+	"homepage": "https://github.com/WASasquatch/humhub-modules-devmode/blob/master/README.md",
 	"license": "AGPL",
 	"time": "2015-04-21",
 	"humhub": {
-		"minVersion": "0.8.0"
+		"minVersion": "0.10.0"
 	}
 }
