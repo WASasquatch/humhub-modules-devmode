@@ -29,6 +29,11 @@ class DevModeController extends Controller
             )
         );
     }
+	
+	public function devPage() 
+	{
+		$this->redirect($this->createUrl('//devmode/maintenance'));
+	}
 
 }
 

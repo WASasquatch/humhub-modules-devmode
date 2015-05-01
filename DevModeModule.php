@@ -3,37 +3,35 @@
 class DevModeModule extends HWebModule
 {
 
-    private $assetsUrl;
-
     public static function onAdminMenuInit($event)
     {
         $event->sender->addItem(array(
             'label' => Yii::t('devmode.base', 'Development Mode'),
-            'url' => Yii::app()->createUrl('//devmode/devmode/config'),
-            'group' => 'manage',
-            'icon' => '<i class="fa fa-file-code-o"></i>',
+            'url' => Yii::app()->createUrl('//devmode/config/config'),
+            'group' => 'settings',
+            'icon' => '<i class="fa fa-lock"></i>',
             'isActive' => (Yii::app()->controller->module && Yii::app()->controller->module->id == '' && Yii::app()->controller->id == 'admin'),
             'sortOrder' => 300,
         ));
 
     }
+    
+    public static function devBlock($event) {
+            
+        $devMode = HSetting::Get('devMode', 'devmode');
+        $controller = $event->sender;
 
-	
-    public function getAssetsUrl()
-    {
-        if ($this->assetsUrl === null)
-            $this->assetsUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('devmode.assets'));
-        return $this->assetsUrl;
+        if ($controller->id != 'auth') {
+
+            if ($devMode && !Yii::app()->user->isAdmin()) {
+                 $event->isValid = false;
+                 $controller->render('application.modules.devmode.views.maintenance');
+            }
+            
+        }
+            
     }
 
-    public function init()
-    {}
-
-    /**
-     * On build of the dashboard sidebar widget, add the devmode widget if module is enabled.
-     *
-     * @param type $event            
-     */
     public static function onSidebarInit($event)
     {
         if (Yii::app()->moduleManager->isEnabled('devmode')) {
@@ -49,14 +47,16 @@ class DevModeModule extends HWebModule
         return Yii::app()->createUrl('//devmode/config/config');
     }
 
-    /**
-     * Enables this module
-     */
     public function enable()
     {
         if (! $this->isEnabled()) {
             // set default config values
-            HSetting::Set('devMode', 0, 'devmode');
+            if (!HSetting::Get('devMode', 'devmode')) {
+                HSetting::Set('devMode', 'devmode', 0);
+            }
+            if (!HSetting::Get('devDescription', 'devmode')) {
+                HSetting::Set('devDescription', 'devmode', 'Test');
+            }
         }
         parent::enable();
     }

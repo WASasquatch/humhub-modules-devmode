@@ -53,11 +53,13 @@ class ConfigController extends Controller
             $form->attributes = $_POST['DevModeConfigureForm'];
             
             if ($form->validate()) {
-                $form->devMode = HSetting::Set('devMode', $form->devMode, 'devmode');
+                $form->devMode = HSetting::Set('devMode', (int) $form->devMode, 'devmode');
+                $form->devDescription = HSetting::Set('devDescription', $form->devDescription, 'devmode');
                 $this->redirect(Yii::app()->createUrl('devmode/config/config'));
             }
         } else {
             $form->devMode = HSetting::Get('devMode', 'devmode');
+            $form->devDescription = HSetting::Get('devDescription', 'devmode');
         }
         
         $this->render('config', array(
