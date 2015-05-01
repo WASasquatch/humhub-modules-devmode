@@ -1,5 +1,7 @@
 <?php
 
+// @Authors: WASasquatch, Luke-
+
 class DevModeModule extends HWebModule
 {
 
