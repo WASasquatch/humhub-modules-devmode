@@ -11,7 +11,7 @@ class DevModeModule extends HWebModule
             'label' => Yii::t('devmode.base', 'Development Mode'),
             'url' => Yii::app()->createUrl('//devmode/config/config'),
             'group' => 'settings',
-            'icon' => '<i class="fa fa-lock"></i>',
+            'icon' => '<i class="fa fa-bug"></i>',
             'isActive' => (Yii::app()->controller->module && Yii::app()->controller->module->id == '' && Yii::app()->controller->id == 'admin'),
             'sortOrder' => 300,
         ));
