@@ -4,7 +4,7 @@
     <div class="panel-body">
 
 
-        <p><?php echo Yii::t('devmode.base', 'Activating development will prevent guests and members from accessing the system.'); ?></p>
+        <p><?php echo Yii::t('devmode.base', 'Activating development mode will prevent guests and members from accessing the system.'); ?></p>
         <br/>
 
         <?php
