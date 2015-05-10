@@ -1,10 +1,10 @@
 
 <div class="panel panel-default">
-    <div class="panel-heading"><?php echo Yii::t('devmode.base', 'Development Mode Module Configuration'); ?></div>
+    <div class="panel-heading"><?php echo Yii::t('DevModeModule.views_config', 'Development Mode Module Configuration'); ?></div>
     <div class="panel-body">
 
 
-        <p><?php echo Yii::t('devmode.base', 'Activating development mode will prevent guests and members from accessing the system.'); ?></p>
+        <p><?php echo Yii::t('DevModeModule.views_config', 'Activating development mode will prevent guests and members from accessing the system.'); ?></p>
         <br/>
 
         <?php
@@ -30,8 +30,8 @@
         </div>
 
         <hr>
-        <?php echo CHtml::submitButton(Yii::t('devmode.base', 'Save'), array('class' => 'btn btn-primary')); ?>
-        <a class="btn btn-default" href="<?php echo $this->createUrl('//admin/module'); ?>"><?php echo Yii::t('devmode.base', 'Back to modules'); ?></a>
+        <?php echo CHtml::submitButton(Yii::t('DevModeModule.views_config', 'Save'), array('class' => 'btn btn-primary')); ?>
+        <a class="btn btn-default" href="<?php echo $this->createUrl('//admin/module'); ?>"><?php echo Yii::t('DevModeModule.views_config', 'Back to modules'); ?></a>
 
         <?php $this->endWidget(); ?>
     </div>
