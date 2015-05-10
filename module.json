@@ -3,7 +3,7 @@
     "name": "Development Mode",
     "description": "Adds ability to put HumHub in Development Mode, restricting access to anyone but admins.",
     "keywords": ["development", "mode", "maintenance", "widget", "dashboard"],
-	"version": "0.0.1",
+	"version": "0.0.1-1",
 	"authors": [
 		{
 			"name": "Jordan Thompson"
