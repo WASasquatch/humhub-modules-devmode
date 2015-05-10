@@ -8,13 +8,13 @@
 	<div class="panel panel-default" id="devmode-panel">
 
 		<div class="panel-heading">
-			<?php echo Yii::t('devmode.maintenance', '<strong>Development</strong> Mode'); ?>
+			<?php echo Yii::t('DevModeModule.views_maintenance', '<strong>Development</strong> Mode'); ?>
 		</div>
 		<div class="panel-body">
-			<h4><?php echo Yii::t('devmode.maintenance', 'We\'re working on some things...'); ?></p></h4>
+			<h4><?php echo Yii::t('DevModeModule.views_maintenance', 'We\'re working on some things...'); ?></p></h4>
 			<hr />
 			<p><?php echo (HSetting::Get('devDescription', 'devmode') != null) ? HSetting::Get('devDescription', 'devmode') :
-							Yii::t('devmode.maintenance', 'We are currently under development right now. Please check back soon!'); ?></p>
+							Yii::t('DevModeModule.views_maintenance', 'We are currently under development right now. Please check back soon!'); ?></p>
 		</div>
 		
 	</div>
