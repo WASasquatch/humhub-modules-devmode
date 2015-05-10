@@ -26,7 +26,7 @@
 		
         <div class="form-group" id="content_field">
             <?php echo $form->labelEx($model, 'devDescription'); ?>
-            <?php echo $form->textArea($model, 'devDescription', array('class' => 'form-control', 'rows' => '5', 'placeholder' => Yii::t('devmode.views_admin_edit', 'What\'s happening in this update?'))); ?>
+            <?php echo $form->textArea($model, 'devDescription', array('class' => 'form-control', 'rows' => '5', 'placeholder' => Yii::t('DevModeModule.views_config', 'What\'s happening in this update?'))); ?>
         </div>
 
         <hr>
